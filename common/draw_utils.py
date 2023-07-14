@@ -14,6 +14,11 @@ def prepare_image(image):
 # show_image / show_images
 #
 
+def show_image_hist(image, size=7):
+    plt.figure(figsize=(size, int(size / 1.5)))
+    plt.hist(image.reshape(-1), bins=100)
+    plt.show()
+
 def show_image(image, label=None, size=7):
     '''
     Convenient method, see show_images for documentation
